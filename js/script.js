@@ -182,8 +182,8 @@ function creatJob(jobsArray) {
           </div>
           <div>
             <ol
-              class="flex list-disc list-inside gap-3 text-[#7b8e8eff] font-medium">
-              <li class="first:list-none">1d ago</li>
+              class="flex list-disc list-inside gap-3 text-[#7b8e8eff] font-medium text-sm">
+              <li class="first:list-none">${job.postedAt}</li>
               <li>${job.contract}</li>
               <li>${job.location}</li>
             </ol>
@@ -237,10 +237,10 @@ jobListingsEl.addEventListener("click", function (e) {
   filterSection.classList.remove("hidden");
   const clickedText = e.target.dataset.filter;
   const newFliterBtn = `
-          <div data-filter="${clickedText}" class="filter-btn relative bg-[#effafaff] p-2 m-3 rounded-md text-[#5ba4a4ff] font-semibold">
-            ${clickedText}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="remove-btn text-white absolute top-0 bottom-0 right-0 p-2 px-2 rounded-e-lg bg-[#5ba4a4ff] hover:bg-black transition-all ease-in-out duration-300 cursor-pointer">
-                     <img  src="images/icon-remove.svg" alt="remove">
+          <div data-filter="${clickedText}" class="filter-btn relative bg-[#effafaff] p-2 m-3 rounded-md text-[#5ba4a4ff] text-sm font-semibold">
+            ${clickedText} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="remove-btn text-white text-sm absolute top-0 bottom-0 right-0 p-2  rounded-e-lg bg-[#5ba4a4ff] hover:bg-black transition-all ease-in-out duration-300 cursor-pointer">
+                     <img  class="w/1/2 inline-block" src="images/icon-remove.svg" alt="remove">
             </button>
           </div>`;
 
