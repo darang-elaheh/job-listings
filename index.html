@@ -14,30 +14,37 @@
   </head>
   <body class="bg-[#effafaff] font-League+Spartan">
     <!-- start of header -->
-    <div class="w-ful h-auto bg-[#5ba4a4ff] z-1">
-      <img src="images/bg-header-desktop.svg" alt="" />
+    <div class="w-full h-auto bg-[#5ba4a4ff] z-1">
+      <img
+        class="w-full hidden sm:block"
+        src="images/bg-header-desktop.svg"
+        alt="" />
+      <img
+        class="w-full block sm:hidden"
+        src="images/bg-header-mobile.svg"
+        alt="" />
     </div>
     <!-- End of header -->
 
-     <!-- Start of filter section -->
+    <!-- Start of filter section -->
     <div class="container mx-auto px-15 -mt-7">
-      <div class="filter-section hidden flex justify-between bg-white rounded-md p-5 relative z-10 ">
-        <div class="filter-btn-list flex flex-wrap">
+      <div
+        class="filter-section hidden flex justify-between bg-white rounded-md p-5 relative z-10">
+        <div class="filter-btn-list flex flex-wrap"></div>
 
-        </div>
-
-        <button  class="clear-btn text-[#5ba4a4ff] underline decoration-[#5ba4a4ff] cursor-pointer">Clear</button>
+        <button
+          class="clear-btn text-[#5ba4a4ff] underline decoration-[#5ba4a4ff] cursor-pointer">
+          Clear
+        </button>
       </div>
     </div>
     <!-- End of filter section -->
 
-     <!-- Start of jobs list section -->
-    <div class="job-listings  container mx-auto mt-5 md:my-10 px-15">
-
+    <!-- Start of jobs list section -->
+    <div class="job-listings container mx-auto mt-5 md:my-10 px-5 lg:px-15">
 
     </div>
     <!-- End of jobs list section -->
     <script src="js/script.js"></script>
-  
   </body>
 </html>

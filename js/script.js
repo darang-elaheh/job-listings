@@ -158,49 +158,52 @@ const jobSkillsArray = [];
 let filterTexts = [];
 function creatJob(jobsArray) {
   jobsArray.forEach(function (job) {
-    const newItem = `
-        <div data-id="${job.id}"
-          class="w-full h-auto p-3 my-5 bg-white rounded-md flex justify-center align-center">
-          <div class="w-1/6">
-            <img class="" src="${job.logo}" alt="" />
+    const newItem = `      <div
+        data-id="${job.id}"
+        class="box w-full h-auto first:mt-[60px] p-5 my-15 md:my-5 bg-white rounded-md flex flex-col gap-2 md:gap-1  md:flex-row justify-around align-center">
+        <div class="w-full flex flex-col justify-center -mt-12  sm:-mt-15 md:mt-0 md:w-1/8  lg:w-1/10">
+          <img class="w-1/5  sm:w/1/8 xl:p-2 md:w-full " src="${job.logo}" alt="" />
+        </div>
+        <div class="w-full md:w-2/6  flex flex-col justify-center">
+          <div
+            class="text-base sm:text-xl md:text-lg lg:text-xl text-[#5ba4a4ff] font-semibold flex gap-1 items-center">
+            <span>${job.company}</span>
+            <span
+              class="new-label hidden bg-[#5ba4a4ff] rounded-2xl text-white text-xs px-2 py-1">
+              NEW!
+            </span>
+            <span
+              class="featured-lable hidden bg-black rounded-2xl text-white text-xs px-2 py-1">
+              FEATURED
+            </span>
           </div>
-          <div class="w-2/6">
-            <div
-              class="text-xl text-[#5ba4a4ff] font-semibold flex gap-2 items-center">
-              <span>${job.company}</span>
-              <span
-                class="new-label hidden bg-[#5ba4a4ff] rounded-2xl text-white text-xs px-2 py-1">
-                NEW!
-              </span>
-              <span class="featured-lable hidden bg-black rounded-2xl text-white text-xs px-2 py-1">
-                FEATURED
-              </span>
-            </div>
-            <div class="text-2xl text-[#5ba4a4ff] font-semibold">
-              ${job.position}
-            </div>
-            <div>
-              <ol
-                class="flex list-disc list-inside gap-3 text-[#7b8e8eff] font-medium">
-                <li class="first:list-none">1d ago</li>
-                <li>${job.contract}</li>
-                <li>${job.location}</li>
-              </ol>
-            </div>
+          <div class="text-base sm:text-xl md:text-lg lg:text-xl text-[#5ba4a4ff] font-semibold">
+            ${job.position}
           </div>
-          <div class="w-3/6">
-            <div class="btn-tag-list p-8 flex justify-end">
-              <button data-filter="${job.role}"
-                class="tag-btn bg-[#effafaff] p-2 m-1 rounded-md text-[#5ba4a4ff] font-semibold hover:text-white hover:bg-[#5ba4a4ff] cursor-pointer transition-all ease-in-out duration-600">
-                ${job.role}
-              </button>
-              <button data-filter="${job.level}"
-                class="tag-btn bg-[#effafaff] p-2 m-1 rounded-md text-[#5ba4a4ff] font-semibold hover:text-white hover:bg-[#5ba4a4ff] cursor-pointer transition-all ease-in-out duration-600">
-                 ${job.level}
-              </button>
-
-            </div>
+          <div>
+            <ol
+              class="flex list-disc list-inside gap-3 text-[#7b8e8eff] font-medium">
+              <li class="first:list-none">1d ago</li>
+              <li>${job.contract}</li>
+              <li>${job.location}</li>
+            </ol>
           </div>
+        </div>
+        <hr class="block md:hidden m-3  border border-gray-200">
+        <div class="w-full md:w-3/6">
+          <div class="btn-tag-list p-2 md:p-8 flex justify-start flex-wrap md:justify-end">
+            <button
+              data-filter="${job.role}"
+              class="tag-btn bg-[#effafaff] p-2 m-1 rounded-md text-[#5ba4a4ff] font-semibold hover:text-white hover:bg-[#5ba4a4ff] cursor-pointer transition-all ease-in-out duration-600">
+              ${job.role}
+            </button>
+            <button
+              data-filter="${job.level}"
+              class="tag-btn bg-[#effafaff] p-2 m-1 rounded-md text-[#5ba4a4ff] font-semibold hover:text-white hover:bg-[#5ba4a4ff] cursor-pointer transition-all ease-in-out duration-600">
+              ${job.level}
+            </button>
+          </div>
+        </div>
       </div>`;
     jobListingsEl.insertAdjacentHTML("beforeend", newItem);
     const addedEl = jobListingsEl.lastElementChild;
