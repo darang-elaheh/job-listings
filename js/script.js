@@ -194,12 +194,12 @@ function creatJob(jobsArray) {
           <div class="btn-tag-list p-2 md:p-8 flex justify-start flex-wrap md:justify-end">
             <button
               data-filter="${job.role}"
-              class="tag-btn bg-[#effafaff] p-2 m-1 rounded-md text-[#5ba4a4ff] font-semibold hover:text-white hover:bg-[#5ba4a4ff] cursor-pointer transition-all ease-in-out duration-600">
+              class="tag-btn bg-[#effafaff] p-2 m-1 rounded-md text-[#5ba4a4ff]  hover:text-white hover:bg-[#5ba4a4ff] cursor-pointer transition-all ease-in-out duration-600">
               ${job.role}
             </button>
             <button
               data-filter="${job.level}"
-              class="tag-btn bg-[#effafaff] p-2 m-1 rounded-md text-[#5ba4a4ff] font-semibold hover:text-white hover:bg-[#5ba4a4ff] cursor-pointer transition-all ease-in-out duration-600">
+              class="tag-btn bg-[#effafaff] p-2 m-1 rounded-md text-[#5ba4a4ff]  hover:text-white hover:bg-[#5ba4a4ff] cursor-pointer transition-all ease-in-out duration-600">
               ${job.level}
             </button>
           </div>
@@ -216,7 +216,7 @@ function creatJob(jobsArray) {
     newArray.forEach(function (item) {
       const newButton = `<button
        data-filter="${item}"
-                 class="tag-btn bg-[#effafaff] p-2 m-1 rounded-md text-[#5ba4a4ff] font-semibold hover:text-white hover:bg-[#5ba4a4ff] cursor-pointer transition-all ease-in-out duration-600">
+                 class="tag-btn bg-[#effafaff] p-2 m-1 rounded-md text-[#5ba4a4ff]  hover:text-white hover:bg-[#5ba4a4ff] cursor-pointer transition-all ease-in-out duration-600">
                  ${item}
                </button>`;
       btnTagListEl.insertAdjacentHTML("beforeend", newButton);
@@ -237,7 +237,7 @@ jobListingsEl.addEventListener("click", function (e) {
   filterSection.classList.remove("hidden");
   const clickedText = e.target.dataset.filter;
   const newFliterBtn = `
-          <div data-filter="${clickedText}" class="filter-btn relative bg-[#effafaff] p-2 m-3 rounded-md text-[#5ba4a4ff] text-sm font-semibold">
+          <div data-filter="${clickedText}" class="filter-btn relative bg-[#effafaff] p-2 m-3 rounded-md text-[#5ba4a4ff] text-sm ">
             ${clickedText} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="remove-btn text-white text-sm absolute top-0 bottom-0 right-0 p-2  rounded-e-lg bg-[#5ba4a4ff] hover:bg-black transition-all ease-in-out duration-300 cursor-pointer">
                      <img  class="w/1/2 inline-block" src="images/icon-remove.svg" alt="remove">
